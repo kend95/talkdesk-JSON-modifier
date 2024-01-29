@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 from datetime import datetime
 
-# gau dep trai
+# gau trinh dep trai
 def get_queue_path(what_queue):  # Define paths for completed queues based on user input
     options = {1: "/English and Spanish (SMS)/Completed/",
                2: "/English and Spanish Queue (NO SMS)/Completed/",
@@ -184,8 +184,11 @@ def main():
         # Prompt user to exit or create a new queue
         finally:
             out = input("Press Y to exit N for a new queue or re-enter: ")
-            if out.lower in ["y","yes"]:
+            print(out)
+            exit_input = ["y", "yes"]
+            if out.lower() in exit_input:
                 run = False
+
 
 
 # Execute main function if the script is run directly
